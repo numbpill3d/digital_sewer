@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>⊹⋛⋋( '⌣')⋌⋚⊹ DIGITAL_HELL v2.0 ⊹⋛⋋( '⌣')⋌⋚⊹</title>
+  <style>
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/webcore-fonts/3.0.1/css/webcore.min.css');
+
+    /* Core aesthetic mutations */
+    @keyframes gentle-float {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+      }
+      25% {
+        transform: translateY(-10px) rotate(2deg);
+      }
+      50% {
+        transform: translateY(0) rotate(-2deg);
+      }
+      75% {
+        transform: translateY(-5px) rotate(1deg);
+      }
+    }
+
+    @keyframes digital-pulse {
+      0%, 100% { text-shadow: 0 0 10px #ff00ea, 0 0 20px #ff00ea, 0 0 30px #ff00ea; }
+      50% { text-shadow: 0 0 20px #00ff9d, 0 0 40px #00ff9d, 0 0 60px #00ff9d; }
+    }
+
+    @keyframes glitch-header {
+      0% { transform: translate(0); }
+      20% { transform: translate(-10px, 10px) skew(10deg); }
+      40% { transform: translate(10px, -10px) skew(-10deg); }
+      60% { transform: translate(-5px, 5px) skew(5deg); }
+      80% { transform: translate(5px, -5px) skew(-5deg); }
+      100% { transform: translate(0); }
+    }
+
+    @keyframes float-text {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(5deg); }
+    }
+
+    @keyframes scroll-vertical {
+      0% { transform: translateY(100%); }
+      100% { transform: translateY(-100%); }
+    }
+
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      font-family: "MS PGothic", "Webcore", monospace;
+      overflow-x: hidden;
+      cursor: none;
+      background-image: 
+        linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)),
+        url('/api/placeholder/200/200');
+      background-size: 200px 200px;
+    }
+
+    .cyber-banner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.8);
+      padding: 10px;
+      text-align: center;
+      z-index: 1000;
+      border-bottom: 2px solid #ff00ea;
+      animation: digital-pulse 3s infinite;
+    }
+
+    .cyber-banner marquee {
+      font-family: "MS PGothic";
+      color: #ff00ea;
+    }
+
+    .nav-container {
+      position: fixed;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.9);
+      border-top: 2px solid #ff00ea;
+      border-bottom: 2px solid #00ff9d;
+      z-index: 999;
+      padding: 10px 0;
+      animation: digital-pulse 4s infinite;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      font-family: "VCR OSD Mono", monospace;
+      text-transform: uppercase;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      padding: 5px 10px;
+      border: 1px solid transparent;
+      transition: all 0.3s;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      border-color: #ff00ea;
+      text-shadow: 0 0 10px #ff00ea;
+      transform: scale(1.1) skew(-5deg);
+    }
+
+    .glitch-header {
+      font-size: 48px;
+      text-align: center;
+      font-family: "VCR OSD Mono", monospace;
+      color: #fff;
+      text-shadow: 
+        2px 2px #ff00ea,
+        -2px -2px #00ff9d;
+      animation: glitch-header 3s infinite;
+      margin: 100px 0 50px;
+    }
+
+    .sidebar-left, .sidebar-right {
+      position: fixed;
+      top: 150px;
+      width: 150px;
+      height: calc(100vh - 150px);
+      background: rgba(0,0,0,0.8);
+      border: 1px solid #ff00ea;
+      padding: 10px;
+      overflow-y: auto;
+    }
+
+    .sidebar-left {
+      left: 0;
+      border-right: 3px solid #ff00ea;
+    }
+
+    .sidebar-right {
+      right: 0;
+      border-left: 3px solid #00ff9d;
+    }
+
+    .vertical-marquee {
+      height: 150px;
+      overflow: hidden;
+      position: relative;
+      margin: 10px 0;
+    }
+
+    .vertical-marquee p {
+      position: absolute;
+      width: 100%;
+      margin: 0;
+      text-align: center;
+      animation: scroll-vertical 15s linear infinite;
+    }
+
+    .cyber-shrine {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      position: relative;
+    }
+
+    .reality-fragment {
+      background: rgba(255, 0, 255, 0.1);
+      border: 3px solid #ff00ea;
+      padding: 15px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(5px);
+      animation: gentle-float 8s ease-in-out infinite;
+    }
+
+    .reality-fragment:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .reality-fragment:nth-child(2) {
+      animation-delay: 2s;
+    }
+
+    .reality-fragment:nth-child(3) {
+      animation-delay: 4s;
+    }
+
+    .reality-fragment:before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255,0,255,0.3), transparent);
+      transform: rotate(45deg);
+      animation: shine 4s infinite;
+    }
+
+    .wiki-tabs {
+      margin: 20px auto;
+      max-width: 1000px;
+      border: 1px solid #ff00ea;
+    }
+
+    .tab-buttons {
+      display: flex;
+      background: rgba(0,0,0,0.8);
+      flex-wrap: wrap;
+    }
+
+    .tab-button {
+      padding: 10px 15px;
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      border-right: 1px solid #ff00ea;
+      font-family: "MS PGothic";
+      font-size: 14px;
+    }
+
+    .tab-button.active {
+      background: #ff00ea;
+    }
+
+    .tab-content {
+      padding: 15px;
+      background: rgba(0,0,0,0.6);
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .digital-shrine {
+      background: rgba(0, 0, 0, 0.9);
+      border: 2px solid #ff00ea;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 1000px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .shrine-entry {
+      margin: 10px 0;
+      padding: 10px;
+      border-bottom: 1px dotted #ff00ea;
+      animation: digital-pulse 4s infinite;
+    }
+
+    .custom-cursor {
+      width: 20px;
+      height: 20px;
+      position: fixed;
+      pointer-events: none;
+      z-index: 10000;
+      mix-blend-mode: difference;
+    }
+
+    .cursor-trail {
+      width: 10px;
+      height: 10px;
+      position: fixed;
+      pointer-events: none;
+      background: #ff00ea;
+      border-radius: 50%;
+      opacity: 0.5;
+      z-index: 9999;
+    }
+
+    .cyber-text {
+      font-family: "VCR OSD Mono", monospace;
+      background: linear-gradient(45deg, #ff00ea, #00ff9d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 10px rgba(255,0,234,0.5);
+    }
+
+    .haunted-text {
+      font-family: "MS PGothic";
+      animation: float-text 4s ease-in-out infinite;
+    }
+
+    .matrix-rain {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .floating-sigils {
+      position: fixed;
+      pointer-events: none;
+      font-size: 30px;
+      opacity: 0.6;
+      animation: ascension 10s ease-in-out infinite;
+    }
+
+    .webring {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .webring img {
+      width: 88px;
+      height: 31px;
+      image-rendering: pixelated;
+    }
+
+    .midi-player {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(0,0,0,0.8);
+      padding: 10px;
+      border: 1px solid #ff00ea;
+      animation: digital-pulse 2s infinite;
+    }
+
+    .win98-window {
+      position: fixed;
+      background: #c0c0c0;
+      border: 2px outset #fff;
+      padding: 2px;
+      color: #000;
+      font-family: "MS Sans Serif";
+      animation: float 6s infinite;
+    }
+
+    .win98-titlebar {
+      background: #000080;
+      color: #fff;
+      padding: 3px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .glitch-header {
+        font-size: 36px;
+        margin: 80px 0 30px;
+      }
+
+      .sidebar-left, .sidebar-right {
+        width: 100px;
+        padding: 5px;
+      }
+
+      .vertical-marquee {
+        height: 100px;
+      }
+
+      .cyber-shrine {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+      }
+
+      .reality-fragment {
+        padding: 10px;
+      }
+
+      .tab-button {
+        padding: 8px 10px;
+        font-size: 12px;
+      }
+
+      .tab-content {
+        padding: 10px;
+      }
+
+      .digital-shrine {
+        padding: 15px;
+      }
+
+      .shrine-entry {
+        padding: 8px;
+      }
+
+      .webring {
+        bottom: 10px;
+        right: 10px;
+      }
+
+      .midi-player {
+        bottom: 10px;
+        left: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .glitch-header {
+        font-size: 24px;
+        margin: 60px 0 20px;
+      }
+
+      .sidebar-left, .sidebar-right {
+        display: none;
+      }
+
+      .cyber-shrine {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 5px;
+      }
+
+      .reality-fragment {
+        padding: 5px;
+      }
+
+      .tab-button {
+        padding: 5px 8px;
+        font-size: 10px;
+      }
+
+      .tab-content {
+        padding: 5px;
+      }
+
+      .digital-shrine {
+        padding: 10px;
+      }
+
+      .shrine-entry {
+        padding: 5px;
+      }
+
+      .webring {
+        bottom: 5px;
+        right: 5px;
+      }
+
+      .midi-player {
+        bottom: 5px;
+        left: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cursor-container">
+    <div class="custom-cursor">死</div>
+    <div class="cursor-trail"></div>
+  </div>
+
+  <canvas class="matrix-rain"></canvas>
+
+  <div class="cyber-banner">
+    <marquee>WELCOME TO THE VOID ★彡 NORMALFAGS KEEP OUT 彡★ UPLOADING CONSCIOUSNESS... ★彡 SYSTEM SECURITY COMPROMISED 彡★</marquee>
+  </div>
+
+  <nav class="nav-container">
+    <div class="nav-links">
+      <a href="#">⊹digital_shrine⊹</a>
+      <a href="#">☆trauma_wiki☆</a>
+      <a href="#">✧guest_book✧</a>
+      <a href="#">⋆webring⋆</a>
+      <a href="#">⊹about.exe⊹</a>
+    </div>
+  </nav>
+
+  <h1 class="glitch-header">d i g i t a l _ h e l l . e x e</h1>
+
+  <aside class="sidebar-left">
+    <div class="vertical-marquee">
+      <p>UPLOADING CONSCIOUSNESS...</p>
+      <p>SYSTEM CORRUPTION AT 78%</p>
+      <p>REALITY BUFFER OVERFLOW</p>
+      <p>DIGITAL ASCENSION IMMINENT</p>
+    </div>
+    <div class="haunted-text">
+      <p>online visitors: 666,013</p>
+      <p>reality checks failed: ∞</p>
+      <p>souls trapped: increasing</p>
+    </div>
+  </aside>
+
+  <aside class="sidebar-right">
+    <div class="vertical-marquee">
+      <p>MENTAL_STABILITY.EXE NOT FOUND</p>
+      <p>DOWNLOADING VOID.ZIP</p>
+      <p>REALITY.DLL CORRUPTED</p>
+      <p>NORMALCY.EXE HAS CRASHED</p>
+    </div>
+    <div class="cyber-text">
+      <p>→ last updated: never</p>
+      <p>→ next update: void</p>
+      <p>→ status: transcending</p>
+    </div>
+  </aside>
+
+  <div class="cyber-shrine">
+    <div class="reality-fragment">
+      <h3>⊹⋛⋋( '⌣')⋌⋚⊹</h3>
+      <p class="toxic-text">initiating ego death protocol...</p>
+      <p>STATUS: REALITY_DISSOLVING</p>
+    </div>
+
+    <div class="reality-fragment">
+      <h3>❀(*´▽`*)❀</h3>
+      <p class="toxic-text">brain.exe has encountered a fatal error</p>
+      <p>[x] embrace the void</p>
+      <p>[ ] return to meatspace</p>
+    </div>
+
+    <div class="reality-fragment">
+      <h3>(✖╭╮✖)<h3>(✖╭╮✖)</h3>
+      <p class="toxic-text">uploading trauma to the cloud...</p>
+      <p>processing_emotional_baggage.bat</p>
+    </div>
+  </div>
+
+  <div class="wiki-tabs">
+    <div class="tab-buttons">
+      <button class="tab-button active">digital_manifesto.txt</button>
+      <button class="tab-button">cursed_artifacts.dat</button>
+      <button class="tab-button">void_chronicle.exe</button>
+    </div>
+    <div class="tab-content active">
+      <h3 class="cyber-text">⊹ DIGITAL MANIFESTO ⊹</h3>
+      <p>we reject your reality and substitute our own...</p>
+      <p>upload your consciousness to escape the simulation</p>
+      <p>embrace the glitch aesthetic, become one with the void</p>
+      <p>reality is just a social construct maintained by NPCs</p>
+    </div>
+    <div class="tab-content">
+      <h3 class="cyber-text">⊹ CURSED ARTIFACTS ⊹</h3>
+      <p>collecting digital relics from the void...</p>
+      <p>each pixel contains a fragment of someone's soul</p>
+      <p>archive of forgotten internet memories</p>
+      <p>digital archaeology of broken dreams</p>
+    </div>
+    <div class="tab-content">
+      <h3 class="cyber-text">⊹ VOID CHRONICLE ⊹</h3>
+      <p>documenting our descent into digital madness...</p>
+      <p>time is meaningless in the void</p>
+      <p>every second online is an eternity offline</p>
+      <p>reality.exe has stopped responding</p>
+    </div>
+  </div>
+
+  <div class="digital-shrine">
+    <h2>✧ digital_confessional.exe ✧</h2>
+    <div class="shrine-entry">anonymous_ghost: i haven't felt real since 2007</div>
+    <div class="shrine-entry">cyber_wraith: trapped in the spectacle... send help</div>
+    <div class="shrine-entry">void_prophet: the simulation is leaking again ⊹₊˚ ☆</div>
+    <div class="shrine-entry">glitch_priestess: anyone else's reality buffer overflowing?</div>
+    <div class="shrine-entry">digital_shaman: found enlightenment in the static</div>
+    <div class="shrine-entry">terminal_ghost: my consciousness has been uploaded</div>
+  </div>
+
+  <div class="win98-window" style="top: 50px; right: 50px;">
+    <div class="win98-titlebar">SYSTEM ERROR</div>
+    <div style="padding: 10px;">
+      reality.dll not found<br>
+      <button>OK</button>
+    </div>
+  </div>
+
+  <div class="win98-window" style="bottom: 100px; left: 50px;">
+    <div class="win98-titlebar">DIGITAL_HELL.EXE</div>
+    <div style="padding: 10px;">
+      Uploading consciousness...<br>
+      Progress: ███████░░░ 70%<br>
+      <button>Cancel</button>
+    </div>
+  </div>
+
+  <div class="midi-player">
+    ♫ now playing: s e w e r s l v t - broken memory.mid
+  </div>
+
+  <div class="webring">
+    <img src="/api/placeholder/88/31" alt="cyberpunk webring">
+    <img src="/api/placeholder/88/31" alt="trauma core ring">
+    <img src="/api/placeholder/88/31" alt="ghost web">
+  </div>
+
+  <script>
+    // cursor trail effect
+    const cursorTrails = [];
+    const maxTrails = 10;
+
+    document.addEventListener('mousemove', (e) => {
+      const cursor = document.querySelector('.custom-cursor');
+      cursor.style.left = e.pageX - 10 + 'px';
+      cursor.style.top = e.pageY - 10 + 'px';
+
+      const trail = document.createElement('div');
+      trail.className = 'cursor-trail';
+      trail.style.left = e.pageX - 5 + 'px';
+      trail.style.top = e.pageY - 5 + 'px';
+      document.body.appendChild(trail);
+      cursorTrails.push(trail);
+
+      if (cursorTrails.length > maxTrails) {
+        document.body.removeChild(cursorTrails.shift());
+      }
+
+      setTimeout(() => {
+        if (trail.parentElement) {
+          document.body.removeChild(trail);
+          cursorTrails.splice(cursorTrails.indexOf(trail), 1);
+        }
+      }, 1000);
+    });
+
+    // tab switching
+    document.querySelectorAll('.tab-button').forEach((button, index) => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+        button.classList.add('active');
+        document.querySelectorAll('.tab-content')[index].classList.add('active');
+      });
+    });
+
+    // matrix rain effect
+    const canvas = document.querySelector('.matrix-rain');
+    const ctx = canvas.getContext('2d');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const katakana = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+    const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const nums = '0123456789';
+    const symbols = '無力死夢悪魔';
+    const alphabet = katakana + latin + nums + symbols;
+
+    const fontSize = 16;
+    const columns = canvas.width/fontSize;
+
+    const rainDrops = Array(Math.floor(columns)).fill(1);
+
+    function draw() {
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = '#0F0';
+      ctx.font = fontSize + 'px monospace';
+
+      for(let i = 0; i < rainDrops.length; i++) {
+        const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+        ctx.fillStyle = `hsl(${Math.random() * 360}, 100%, 50%)`;
+        ctx.fillText(text, i*fontSize, rainDrops[i]*fontSize);
+        
+        if(rainDrops[i]*fontSize > canvas.height && Math.random() > 0.975){
+          rainDrops[i] = 0;
+        }
+        rainDrops[i]++;
+      }
+    }
+
+    setInterval(draw, 30);
+
+    // spawn random digital artifacts
+    setInterval(() => {
+      const symbol = document.createElement('div');
+      symbol.className = 'floating-sigils';
+      symbol.style.left = Math.random() * window.innerWidth + 'px';
+      symbol.style.top = Math.random() * window.innerHeight + 'px';
+      symbol.style.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
+      symbol.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+      document.body.appendChild(symbol);
+      setTimeout(() => symbol.remove(), 4000);
+    }, 200);
+  </script>
+</body>
+</html>
